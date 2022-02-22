@@ -1,12 +1,13 @@
 require('dotenv').config();
 const { nanoid } = require('nanoid');
 const { MongoClient } = require('mongodb');
+const { ethers } = require('ethers');
 
 const client = new MongoClient(process.env.MONGO_URI);
 
 const main = async () => {
   const code = nanoid(10);
-  const quantity = parseInt(process.argv[2]);
+  const quantity = ethers.utils.parseUnits(process.argv[2], 18).toString();
   const reason = process.argv[3];
 
   try {

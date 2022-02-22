@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useQuery } from 'react-query'
 import { useConnect, useAccount, useNetwork, useContractRead, useContractWrite } from 'wagmi'
+import { ethers } from 'ethers';
 import clsx from 'clsx';
 import AJCoin from '../../AJCoin.json'
 
@@ -49,11 +50,11 @@ function Claim() {
 
   const handleConnect = () => connect(connectors[0]);
 
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading || !code) return <h1>Loading...</h1>;
   if (error) return <h1>{error.message}</h1>;
 
   return <>
-    <h1>You have been air dropped {data?.quantity} AJ Coins for {data?.reason}!</h1>
+    <h1>You have been air dropped {ethers.utils.formatUnits(data?.quantity, 18)} AJ Coins for {data?.reason}!</h1>
     {!connected && <>
       <button type="button" className={clsx("nes-btn", connectLoading && "is-disabled")} disabled={connectLoading} onClick={handleConnect}>Connect to Claim Tokens</button>
       {connectError && <p>{connectError.message}</p>}
