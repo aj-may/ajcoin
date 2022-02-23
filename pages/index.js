@@ -9,7 +9,9 @@ export default function Home() {
           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
         </div>
         <p style={{ padding: '2rem' }}>
-          <a href="/whitepaper.pdf" target="_blank" style={{ color: 'gray' }}>whitepaper</a>
+          <a href="https://github.com/aj-may/ajcoin" target="_blank" style={{ color: 'gray', margin: '1rem' }}>github</a>
+          <a href="/whitepaper.pdf" target="_blank" style={{ color: 'gray', margin: '1rem' }}>whitepaper</a>
+          <a href="https://polygonscan.com/address/0x0DcBfa223d69edadB70c90F12B014fcFF8D281b2" target="_blank" style={{ color: 'gray', margin: '1rem' }}>polygonscan</a>
         </p>
       </main>
     </div>
