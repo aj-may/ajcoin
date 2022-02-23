@@ -1,0 +1,18 @@
+{
+  "name": "My Token List",
+  "timestamp": "2020-06-12T00:00:00+00:00",
+  "tokens": [
+    {
+      "chainId": 137,
+      "address": "0x0DcBfa223d69edadB70c90F12B014fcFF8D281b2",
+      "symbol": "AJC",
+      "name": "AJ Coin",
+      "decimals": 18
+    }
+  ],
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}

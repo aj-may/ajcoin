@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { WagmiProvider, chain } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { providers } from 'ethers'
@@ -15,11 +16,17 @@ function App({ Component, pageProps }) {
 
   const queryClient = new QueryClient();
 
-  return <WagmiProvider autoConnect connectors={connectors} provider={provider}>
-    <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
-    </QueryClientProvider>
-  </WagmiProvider>;
+  return <>
+    <Head>
+      <title>AJ Coin</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <WagmiProvider autoConnect connectors={connectors} provider={provider}>
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
+    </WagmiProvider>
+  </>;
 }
 
 export default App;
