@@ -16,11 +16,10 @@ const main = async () => {
     const nonce = last.nonce + 1;
     await client.db('ajcoin').collection('airdrops').insertOne({ code, nonce, quantity, reason });
     console.log(`https://ajcoin.xyz/c/${code}`);
+    process.exit(0);
   } catch(err) {
     console.error(err);
     process.exit(1);
-  } finally {
-    await client.close();
   }
 }
 main();
