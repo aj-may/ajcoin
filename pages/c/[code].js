@@ -4,6 +4,7 @@ import { useConnect, useAccount, useNetwork, useContractRead, useContractWrite }
 import { ethers } from 'ethers';
 import clsx from 'clsx';
 import AJCoin from '../../AJCoin.json'
+import styles from '../../styles/Home.module.css'
 
 async function fetchClaim({ queryKey }) {
   const [_key, { code, address }] = queryKey;
@@ -39,22 +40,19 @@ function ClaimButton({ claim }) {
   </>;
 }
 
-function Claim() {
-  const router = useRouter();
-  const { code } = router.query;
-
+function Claim({ code }) {
   const [{ data: account }] = useAccount();
   const address = account ? account.address : null
-  const { isLoading, error, data } = useQuery(['claim', { code, address }], fetchClaim, { enabled: !!code });
+  const { isLoading, error, data } = useQuery(['claim', { code, address }], fetchClaim);
   const [{ data: { connected, connectors }, error: connectError, loading: connectLoading }, connect] = useConnect();
 
   const handleConnect = () => connect(connectors[0]);
 
-  if (isLoading || !code) return <h1>Loading...</h1>;
-  if (error) return <h1>{error.message}</h1>;
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>{error.message}</p>;
 
   return <>
-    <h1>You have been air dropped {ethers.utils.formatUnits(data?.quantity, 18)} AJ Coins for {data?.reason}!</h1>
+    <p>You have been air dropped {ethers.utils.formatUnits(data?.quantity, 18)} AJ Coins for {data?.reason}!</p>
     {!connected && <>
       <button type="button" className={clsx("nes-btn", connectLoading && "is-disabled")} disabled={connectLoading} onClick={handleConnect}>Connect to Claim Tokens</button>
       {connectError && <p>{connectError.message}</p>}
@@ -62,5 +60,19 @@ function Claim() {
     {connected && <ClaimButton claim={data} />}
   </>;
 }
+
+function ClaimPage() {
+  const router = useRouter();
+  const { code } = router.query;
+
+  return <div className={styles.container}>
+    <main className={styles.main}>
+      <div className="nes-container is-centered">
+        {!code && <p>Loading...</p>}
+        {code && <Claim code={code} />}
+      </div>
+    </main>
+  </div>;
+}
   
-export default Claim
+export default ClaimPage;
