@@ -1,10 +1,12 @@
 module.exports = async ({deployments, getNamedAccounts}) => {
-    const { deploy } = deployments;
+    const { deploy, get } = deployments;
     const { deployer } = await getNamedAccounts();
 
-    await deploy('AJCoin', {
+    const ajCoin = await get('AJCoin');
+
+    await deploy('AJMarket', {
         from: deployer,
-        args: [],
+        args: [ajCoin.address],
         log: true,
     });
 }
