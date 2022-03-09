@@ -3,7 +3,8 @@ import { WagmiProvider, chain } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { providers } from 'ethers'
 import { QueryClientProvider, QueryClient } from 'react-query'
-import "nes.css/css/nes.min.css"
+import 'styles/global.css';
+import Layout from 'components/Layout'
 
 function App({ Component, pageProps }) {
   const connectors = [
@@ -23,7 +24,9 @@ function App({ Component, pageProps }) {
     </Head>
     <WagmiProvider autoConnect connectors={connectors} provider={provider}>
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </QueryClientProvider>
     </WagmiProvider>
   </>;
