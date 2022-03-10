@@ -5,14 +5,14 @@ const faqs = [
       '$AJC lives on the Polygon network which requires MATIC tokens to pay for the transaction fees. To get MATIC on the polygon network, either beg your friends for some (you wont need much), or buy some on MoonPay.',
   },
   {
-    question: 'How do you make holy water?',
+    question: 'The price of $AJC went down, but I thought it only goes up?',
     answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+      'Correct. The price of $AJC only ever goes up, what you are seeing may be an issue with the price feed you are looking at - please refresh the chart to verify. If the issue persists, just turn the chart upside down.',
   },
   {
-    question: 'How do you make holy water?',
+    question: 'What can I do with my $AJC?',
     answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+      'The better question is what CAN\'T you do with your $AJC? You can redeem your $AJC for exclusive dope merch, use $AJC to provide liquidity to earn those sweet sweet yields, or just HODL because, if you recall, IT ONLY GOES UP.',
   },
 ]
 
