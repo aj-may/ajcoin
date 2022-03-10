@@ -1,8 +1,8 @@
 const faqs = [
   {
-    question: 'How do you make holy water?',
+    question: 'When I try to claim my $AJC it says insufficient funds.  What do I do?',
     answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+      '$AJC lives on the Polygon network which requires MATIC tokens to pay for the transaction fees. To get MATIC on the polygon network, either beg your friends for some (you wont need much), or buy some on MoonPay.',
   },
   {
     question: 'How do you make holy water?',
@@ -24,7 +24,7 @@ export default function Faqs() {
           <h2 className="text-3xl font-extrabold text-gray-900">Frequently asked questions</h2>
           <p className="mt-4 text-lg text-gray-500">
             Can’t find the answer you’re looking for? Reach out to our{' '}
-            <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+            <a href="mailto:support@ajcoin.xyz" className="font-medium text-indigo-600 hover:text-indigo-500">
               customer support
             </a>{' '}
             team.
