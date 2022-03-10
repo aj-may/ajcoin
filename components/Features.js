@@ -1,4 +1,4 @@
-import { GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import { GlobeAltIcon, ShoppingCartIcon, TrendingUpIcon } from '@heroicons/react/outline'
 
 const features = [
   {
@@ -8,16 +8,17 @@ const features = [
     icon: GlobeAltIcon,
   },
   {
-    name: 'No hidden fees',
+    name: '$AJC Yield',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
+      `Dont just HODL, let your AJC earn yield for you!  Simply provide an equivalent value of MATIC
+      and AJC and watch the fees roll in 😎`,
+    icon: TrendingUpIcon,
   },
   {
-    name: 'Transfers are instant',
+    name: 'Exclusive Marketplace',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LightningBoltIcon,
+      'Coming Soon: Exchange $AJC for exclusive digital and physical goods that can only be purchased with $AJC.',
+    icon: ShoppingCartIcon,
   },
 ];
 
