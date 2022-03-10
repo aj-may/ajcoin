@@ -9,6 +9,16 @@ const people = [
     role: 'community manager',
     imageUrl: '/img/alej.png',
   },
+  {
+    name: 'alex',
+    role: 'investor',
+    imageUrl: '/img/alex.jpg',
+  },
+  {
+    name: 'TheVange.crypto',
+    role: 'investor relations',
+    imageUrl: '/img/thevange-crypto.png',
+  },
 ];
 
 export default function Team() {
