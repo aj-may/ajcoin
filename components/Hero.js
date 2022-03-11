@@ -9,8 +9,9 @@ export default function Hero() {
         <span className="block xl:inline">goes up</span>
       </h1>
       <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-        fugiat veniam occaecat fugiat aliqua.
+      $AJC is the future of finance. Backed by sick memes and dope merch, its value only goes up.
+      Using the power of the Polygon network, $AJC is projected to flip the US Dollar in under a year.
+      Still using the dollar to buy things? Get with the times, buy some $AJC.
       </p>
       <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
         <div className="rounded-md shadow">
