@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   return <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
-    <div className="text-center">
+    <div className="text-center" id="about">
       <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
         <span className="block xl:inline">It</span>{' '}
         <span className="block text-indigo-600 xl:inline">only</span>{' '}
