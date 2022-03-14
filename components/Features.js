@@ -1,11 +1,11 @@
-import { GlobeAltIcon, ShoppingCartIcon, TrendingUpIcon } from '@heroicons/react/outline'
+import { HeartIcon, ShoppingCartIcon, TrendingUpIcon } from '@heroicons/react/outline'
 
 const features = [
   {
-    name: 'Competitive exchange rates',
+    name: 'Prefered token of Elon Musk',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
+      'Elon Musk has agreed to tweet controversial comments about AJ Coin on a weekly bases. This will lead to wild volatility and fluctuations in valuation while still only going up!',
+    icon: HeartIcon,
   },
   {
     name: '$AJC Yield',
